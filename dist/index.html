@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7413959eec.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <title>My Recipes</title>
+  </head>
+  <body>
+    <input id="ingriediantInput" type="text" />
+    <button id="search">Search</button>
+    <div class="check-group">
+      <input
+        class="form-radio"
+        type="checkbox"
+        name="glutenFree"
+        id="glutenFree"
+      />
+      <label for="glutenFree"><b>GLUTEN FREE</b></label>
+    </div>
+    <div class="check-group">
+      <input class="form-radio" type="checkbox" name="milkFree" id="milkFree" />
+      <label for="milkFree"><b>DAIRY FREE</b></label>
+    </div>
+    <div id="container"></div>
+    <div id="notFound"></div>
+
+    <script id="releventRecipes" type="text/x-handlebars-template">
+      {{#each recipes}}
+        <div class="recipe">
+          <a href="{{href}}"><i class="fa-solid fa-play fa-2x"></i></a>
+          <h4 class="title">{{title}}</h4>
+          <img src="{{thumbnail}}" /><br />
+
+          <label>Ingredients</label>
+          <ul>
+            {{#each ingredients}}
+              <li>{{ingredient}}</li>
+            {{/each}}
+          </ul>
+
+        </div>
+      {{/each}}
+    </script>
+
+    <button id="previous">Previous</button> <button id="next">Next</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

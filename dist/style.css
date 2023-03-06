@@ -1,0 +1,86 @@
+body {
+  background-color: #92d5ea;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+}
+
+.recipe {
+  background-color: #f4fffb;
+  display: inline-block;
+  padding-left: 0.3%;
+  border-radius: 5%;
+}
+.title {
+  color: #3d6994;
+  font-size: large;
+}
+
+label {
+  color: #284b6e;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  color: #3d6994;
+}
+
+li {
+  margin: 1%;
+}
+
+img {
+  width: 40%;
+  height: 40%;
+  border-radius: 2%;
+  margin: auto;
+  display: block;
+}
+.recipe {
+  position: relative;
+  width: 30%;
+  margin: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+
+#notFound {
+  color: red;
+  margin: 2%;
+}
+
+button {
+  padding: 12px 40px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 1px rgb(131, 131, 219);
+  border: 1px solid gray;
+  font-size: 20px;
+  color: #284b6e;
+}
+
+#ingriediantInput {
+  padding: 12px 40px;
+  border: 1px solid gray;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+i {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  color: #92d5ea;
+}
+
+.form-radio {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+b {
+  font-size: large;
+}
