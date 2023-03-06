@@ -7,8 +7,11 @@ const PAGE_SIZE = 4;
 let ingredient;
 let recipes;
 
+$(".navigate").hide();
+
 $("#search").on("click", function () {
   ingredient = $("input").val();
+  page = 1;
   getRecipes();
 });
 
@@ -25,11 +28,13 @@ const getRecipes = function () {
 const displayRecipes = function () {
   $("#container").empty();
   if ((page == 1) & (recipes.length == 0)) {
+    $(".navigate").hide();
     $("#container").empty();
     $("#notFound").empty();
     $("#notFound").append("There are no match!");
   }
   if (recipes.length != 0) {
+    $(".navigate").show();
     prepareIngredients(recipes);
     renderer.render(recipes);
   }
